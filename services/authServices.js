@@ -5,7 +5,10 @@ require('dotenv').config();
 
 const user = {
   id: 1,
+  name: 'Pepe Pérez',
+  role: 'admin',
   email: 'usuario@example.com',
+  profilePic: 'https://example.com/profile.jpg', // URL de la imagen de perfil
   password: '123456', // En la práctica esto estaría hasheado
 };
 
@@ -38,7 +41,10 @@ const loginUser = async (email, password) => {
     token,
     user: {
       id: user.id,
-      email: user.email
+      name : user.name,
+      email: user.email,
+      role: user.role,
+      profilePic: user.profilePic 
     }
   };
 };

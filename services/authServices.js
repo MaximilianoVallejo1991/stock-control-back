@@ -8,8 +8,8 @@ const user = {
   name: 'Pepe Pérez',
   role: 'admin',
   email: 'usuario@example.com',
-  profilePic: 'https://example.com/profile.jpg', // URL de la imagen de perfil
   password: '123456', // En la práctica esto estaría hasheado
+  profilePic: 'https://example.com/profile.jpg', // URL de la imagen de perfil
 };
 
 const loginUser = async (email, password) => {
@@ -18,7 +18,7 @@ const loginUser = async (email, password) => {
 // EJEMPLO userModel.findOne({ where: { email } });
 
   if (email !== user.email || password !== user.password) {
-    throw new Error('Credenciales incorrectas');
+    throw new Error('Credenciales incorrectas desde el backend');
   }
 
   // if (rows.length === 0) {
